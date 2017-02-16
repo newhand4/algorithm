@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="201609">
+      <UniqueIdentifier>{d9df0b5a-5186-49ad-8589-29af636602c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="201608">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="201607">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="201610">
+      <UniqueIdentifier>{8517e7d7-7392-49b6-8535-042b650e1eb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="201611">
+      <UniqueIdentifier>{91444122-eb1e-4a5f-9d63-40366a1a74a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="201612">
+      <UniqueIdentifier>{40611216-7066-4c29-99b9-770f10cf5cea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="其他文件">
+      <UniqueIdentifier>{167ef35a-3cec-4222-9b36-2acb9d87e28c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="201702">
+      <UniqueIdentifier>{0aad846d-4f5b-4b2d-b5c8-7ce82210a0ad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="合并.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="选择排序.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="自底向上合并排序.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="二分搜索.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="插入排序.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="Siftup堆辅助运算.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="Siftdown堆辅助运算.cpp">
+      <Filter>201607</Filter>
+    </ClCompile>
+    <ClCompile Include="整数幂.cpp">
+      <Filter>201608</Filter>
+    </ClCompile>
+    <ClCompile Include="多项式求值.cpp">
+      <Filter>201608</Filter>
+    </ClCompile>
+    <ClCompile Include="基数排序.cpp">
+      <Filter>201609</Filter>
+    </ClCompile>
+    <ClCompile Include="并查集.cpp">
+      <Filter>201608</Filter>
+    </ClCompile>
+    <ClCompile Include="创建堆及堆排序.cpp">
+      <Filter>201608</Filter>
+    </ClCompile>
+    <ClCompile Include="堆的插入删除.cpp">
+      <Filter>201608</Filter>
+    </ClCompile>
+    <ClCompile Include="递归选择插入排序.cpp">
+      <Filter>201608</Filter>
+    </ClCompile>
+    <ClCompile Include="模板.cpp" />
+    <ClCompile Include="塔吊移动模拟数据.cpp">
+      <Filter>201609</Filter>
+    </ClCompile>
+    <ClCompile Include="寻找多数元素.cpp">
+      <Filter>201610</Filter>
+    </ClCompile>
+    <ClCompile Include="生成排序first.cpp">
+      <Filter>201610</Filter>
+    </ClCompile>
+    <ClCompile Include="最大最小元素.cpp">
+      <Filter>201610</Filter>
+    </ClCompile>
+    <ClCompile Include="自顶向下合并排序.cpp">
+      <Filter>201611</Filter>
+    </ClCompile>
+    <ClCompile Include="寻找中项和第k小元素.cpp">
+      <Filter>201611</Filter>
+    </ClCompile>
+    <ClCompile Include="位图排序.cpp">
+      <Filter>201611</Filter>
+    </ClCompile>
+    <ClCompile Include="最大子数组.cpp">
+      <Filter>201611</Filter>
+    </ClCompile>
+    <ClCompile Include="选择算法.cpp">
+      <Filter>201612</Filter>
+    </ClCompile>
+    <ClCompile Include="三个水桶等分8升水.cpp">
+      <Filter>201612</Filter>
+    </ClCompile>
+    <ClCompile Include="特定字符串解析.cpp">
+      <Filter>其他文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CpuInfo.cpp">
+      <Filter>其他文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最近点对问题.cpp">
+      <Filter>201702</Filter>
+    </ClCompile>
+    <ClCompile Include="快速排序.cpp">
+      <Filter>201702</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
