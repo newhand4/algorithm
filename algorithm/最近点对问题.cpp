@@ -340,24 +340,24 @@ void NearPoint::test()
 }
 
 //≤‚ ‘
-int main(int argc, char const *argv[])
-{
-	/*while (1)
-	{
-	NearPoint t;
-	t.init(50);
-	t.exec();		   
-	t.print();
-	}*/
-	//printf("test\n");
-	while (1)
-{
-	NearPoint t;
-		t.init(50);
-		t.test();
-		t.print();
-}
-
-	system("pause");
-	return 0;
-}
+//int main(int argc, char const *argv[])
+//{
+//	/*while (1)
+//	{
+//		NearPoint t;
+//		t.init(50);
+//		t.exec();
+//		t.print();
+//	}
+//	printf("test\n");*/
+//	while (1)
+//	{
+//		NearPoint t;
+//		t.init(50);
+//		t.test();
+//		t.print();
+//	}
+//
+//	system("pause");
+//	return 0;
+//}
