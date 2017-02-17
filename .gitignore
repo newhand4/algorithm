@@ -49,3 +49,10 @@ Debug/algorithm.exe
 *.obj
 *.obj
 *.obj
+*.obj
+algorithm/Debug/堆的插入删除.obj
+algorithm/Debug/塔吊移动模拟数据.obj
+algorithm/Debug/基数排序.obj
+*.obj
+Debug/algorithm.exe
+*.ilk
