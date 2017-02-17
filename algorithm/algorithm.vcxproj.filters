@@ -118,10 +118,10 @@
     <ClCompile Include="快速排序.cpp">
       <Filter>201702</Filter>
     </ClCompile>
-    <ClCompile Include="最长公共子序列问题.cpp">
+    <ClCompile Include="钢条切割.cpp">
       <Filter>201702</Filter>
     </ClCompile>
-    <ClCompile Include="钢条切割.cpp">
+    <ClCompile Include="最长公共子序列问题 .cpp">
       <Filter>201702</Filter>
     </ClCompile>
   </ItemGroup>
