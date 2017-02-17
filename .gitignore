@@ -56,3 +56,10 @@ algorithm/Debug/基数排序.obj
 *.obj
 Debug/algorithm.exe
 *.ilk
+*.pdb
+*.obj
+*.obj
+*.idb
+*.exe
+Debug/algorithm.ilk
+*.pdb
