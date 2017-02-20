@@ -68,16 +68,16 @@ void quicksort(int *a,int left,int right)
 }
 
 //≤‚ ‘
-int main(int argc, char const *argv[])
-{
-	int a[]={1,3,5,7,9,2,4,6,8,0};
-	int length = Size(a);
-	quicksort(a,0,length-1);
-	for (int i = 0;i<length;i++)
-	{
-		cout << a[i] << " ";
-	}
-	cout << endl;
-	system("pause");
-	return 0;
-}
+//int main(int argc, char const *argv[])
+//{
+//	int a[]={1,3,5,7,9,2,4,6,8,0};
+//	int length = Size(a);
+//	quicksort(a,0,length-1);
+//	for (int i = 0;i<length;i++)
+//	{
+//		cout << a[i] << " ";
+//	}
+//	cout << endl;
+//	system("pause");
+//	return 0;
+//}

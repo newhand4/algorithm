@@ -302,7 +302,7 @@ void NearPoint::circle(PointVec * input )			//循环体,输入为newPointVector
 double NearPoint::compare(Point_ * tmp)				//与当前的结果比较,保留最短距离.
 {
 
-	 int delt_x = (tmp->x - cur->x) ;
+	 int delt_x = (tmp->x - cur->x) ; 
 	 int delt_y = (tmp->y - cur->y) ; 
 	 double TwoPointDist = sqrt((double) delt_x * delt_x + delt_y * delt_y ) ; 
 	 if (TwoPointDist < rs.dis)
