@@ -67,7 +67,7 @@ char  S[801][801];
 pii water[640001];
 
 int main() {
-	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
+	freopen("F:\\in.txt", "r", stdin);
 	int n, m;
 	scanf("%d %d",&n,&m);
 	rep(i, n)scanf("%s", S[i]);
@@ -75,7 +75,7 @@ int main() {
 	pii temp;
 	rep(i,n)rep(j,m)if (S[i][j] == '0')
 	{
-		temp = { i, j };
+		temp = mp(i , j);
 		water[wnum++] = temp;
 		S[i][j] = 0 ;
 	}

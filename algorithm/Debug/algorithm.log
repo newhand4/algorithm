@@ -1,10 +1,10 @@
-﻿  水陆距离.cpp
-d:\document\github\algorithm\algorithm\水陆距离.cpp(41): warning C4244: “初始化”: 从“double”转换到“ll”，可能丢失数据
-d:\document\github\algorithm\algorithm\水陆距离.cpp(70): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: 参见“freopen”的声明
-d:\document\github\algorithm\algorithm\水陆距离.cpp(72): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
-d:\document\github\algorithm\algorithm\水陆距离.cpp(73): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
-  algorithm.vcxproj -> D:\document\github\algorithm\Debug\algorithm.exe
-  algorithm.vcxproj -> D:\document\github\algorithm\Debug\algorithm.pdb (Full PDB)
+﻿项目文件包含 ToolsVersion="14.0" 设置，但此工具集未知或缺失。您可以通过为此工具集安装相应的 .NET Framework 来解决此问题。将项目视为具有 ToolsVersion="4.0" 设置。
+  水陆距离.cpp
+e:\vs2012_doc\algorithm\algorithm\水陆距离.cpp(41): warning C4244: “初始化”: 从“double”转换到“const ll”，可能丢失数据
+e:\vs2012_doc\algorithm\algorithm\水陆距离.cpp(70): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(233) : 参见“freopen”的声明
+e:\vs2012_doc\algorithm\algorithm\水陆距离.cpp(72): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : 参见“scanf”的声明
+e:\vs2012_doc\algorithm\algorithm\水陆距离.cpp(73): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(290) : 参见“scanf”的声明
+  algorithm.vcxproj -> E:\VS2012_doc\algorithm\Debug\algorithm.exe

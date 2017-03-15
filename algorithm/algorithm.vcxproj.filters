@@ -127,5 +127,11 @@
     <ClCompile Include="最近点对问题.cpp">
       <Filter>201703</Filter>
     </ClCompile>
+    <ClCompile Include="水陆距离.cpp">
+      <Filter>201703</Filter>
+    </ClCompile>
+    <ClCompile Include="自行车架.cpp">
+      <Filter>201703</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
