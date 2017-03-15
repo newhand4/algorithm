@@ -198,7 +198,7 @@ void NearPoint::init(int pointNum)
 		Point_ * tmp = new Point_( x , y );
 		PointVector.push_back(tmp);
 	}
-	sort(PointVector.begin(),PointVector.end(),comp);	
+	sort(PointVector.begin(),PointVector.end(),comp);	//可以用合并排序解决
 }
 
 void NearPoint::exec()		   //执行

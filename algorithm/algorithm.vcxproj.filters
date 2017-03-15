@@ -31,6 +31,9 @@
     <Filter Include="201702">
       <UniqueIdentifier>{0aad846d-4f5b-4b2d-b5c8-7ce82210a0ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="201703">
+      <UniqueIdentifier>{9a05a683-37f2-4891-8b95-1f2fa3bea6ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="合并.cpp">
@@ -112,17 +115,17 @@
     <ClCompile Include="CpuInfo.cpp">
       <Filter>其他文件</Filter>
     </ClCompile>
-    <ClCompile Include="最近点对问题.cpp">
-      <Filter>201702</Filter>
-    </ClCompile>
     <ClCompile Include="快速排序.cpp">
       <Filter>201702</Filter>
     </ClCompile>
     <ClCompile Include="钢条切割.cpp">
-      <Filter>201702</Filter>
+      <Filter>201703</Filter>
     </ClCompile>
     <ClCompile Include="最长公共子序列问题 .cpp">
-      <Filter>201702</Filter>
+      <Filter>201703</Filter>
+    </ClCompile>
+    <ClCompile Include="最近点对问题.cpp">
+      <Filter>201703</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
