@@ -92,8 +92,10 @@
     <ClCompile Include="最近点对问题.cpp" />
     <ClCompile Include="最长公共子序列问题 .cpp" />
     <ClCompile Include="模板.cpp" />
+    <ClCompile Include="水陆距离.cpp" />
     <ClCompile Include="特定字符串解析.cpp" />
     <ClCompile Include="生成排序first.cpp" />
+    <ClCompile Include="自行车架.cpp" />
     <ClCompile Include="自顶向下合并排序.cpp" />
     <ClCompile Include="选择算法.cpp" />
     <ClCompile Include="递归选择插入排序.cpp" />
