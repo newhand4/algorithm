@@ -64,13 +64,56 @@ inline void RI(int& x)
 /*--------------------------------------------------*/
 
 char  S[801][801];
-pii water[640001];
+int  d[801][801];
+queue< pii >  q;
+int dx[]={0,0,1,-1},dy[]={1,-1,0,0};
 
-int main() {
-	freopen("F:\\in.txt", "r", stdin);
-	int n, m;
-	scanf("%d %d",&n,&m);
-	rep(i, n)scanf("%s", S[i]);
+//int main() {
+//	freopen("F:\\in.txt", "r", stdin);
+//	int n , m ,a , b , x , y;
+//	scanf("%d %d",&n,&m);
+//	rep(i, n)scanf("%s", S[i]);
+//
+//	pii temp ;
+//	rep(i,n)
+//		rep(j,m)
+//		if (S[i][j] == '0')
+//		{
+//			q.push(mp(i,j));
+//			d[i][j] = 0 ;
+//		}
+//		else
+//		{
+//			d[i][j] = -1 ; 
+//		}
+//
+//	while (!q.empty())
+//	{
+//		temp = q.front();q.pop();
+//		a = temp.FI ; b = temp.SE ;
+//		rep(i,4)
+//		{
+//			x = a + dx[i] ; y = b + dy[i] ;
+//			if ( d[x][y]== -1 && x>=0 && x<n && y>=0 && y<m )
+//			{
+//				d[x][y] = d[a][b] + 1 ;
+//				q.push(mp(x,y));
+//			}
+//		}
+//	}
+//
+//	rep(i, n) {
+//		rep(j, m)printf("%d ", d[i][j]);
+//		printf("\n");
+//	}
+//	system("pause");
+//}
+
+
+
+
+
+	/********该方案是以简单的x+y的大小判断距离,否决***********
 	int wnum = 0;
 	pii temp;
 	rep(i,n)rep(j,m)if (S[i][j] == '0')
@@ -89,11 +132,5 @@ int main() {
 			if (t < res)res = t;
 		}
 		S[i][j] = res;
-	}
-	rep(i, n) {
-		rep(j, m)printf("%d ", S[i][j]);
-		printf("\n");
-	}
-	system("pause");
+	}********该方案是以简单的x+y的大小判断距离,否决************/
 
-}
