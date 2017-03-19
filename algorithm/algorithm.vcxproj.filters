@@ -133,5 +133,8 @@
     <ClCompile Include="自行车架.cpp">
       <Filter>201703</Filter>
     </ClCompile>
+    <ClCompile Include="出勤记录I.cpp">
+      <Filter>201703</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

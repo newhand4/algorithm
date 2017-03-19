@@ -71,41 +71,41 @@ int  leng[801];     //存放对应字符串的长度
 int  L[801][801];   //计算所需的空间,这只能用于两个字符串. 注 : 待写
 
 //测试
-int main(int argc, char const *argv[])
-{
-	freopen("F:\\in.txt", "r", stdin);
-	int n ; 
-	scanf("%d",&n);
-	for (int i = 0 ; i < n ; i++)
-	{
-		scanf("%s",St[i]);
-		leng[i] = slength(St[i]);
-	}
-	//暂时计算两个字符串的值,计算需要整合成一个函数
-	for (int i = 0 ; i <= leng[0] ; i++)
-	{
-		L[i][0] = 0 ;
-	}
-	for (int j = 0 ; j <= leng[1] ; j++)
-	{
-		L[0][j] = 0 ;
-	}
-	for (int i = 1 ; i <= leng[0] ; i++)
-		for (int j = 1 ; j <= leng[1] ; j++)
-		{
-			if (St[0][i-1] == St[1][j-1])
-			{
-				L[i][j] = L[i-1][j-1] + 1 ;
-			}
-			else
-			{
-				L[i][j] = L[i-1][j] >= L[i][j-1] ? L[i-1][j] : L[i][j-1] ;
-			}
-		}
-
-	printf("%d",L[leng[0]][leng[1]]);
-
-
-	system("pause");
-	return 0;
-}
+//int main(int argc, char const *argv[])
+//{
+//	freopen("F:\\in.txt", "r", stdin);
+//	int n ; 
+//	scanf("%d",&n);
+//	for (int i = 0 ; i < n ; i++)
+//	{
+//		scanf("%s",St[i]);
+//		leng[i] = slength(St[i]);
+//	}
+//	//暂时计算两个字符串的值,计算需要整合成一个函数
+//	for (int i = 0 ; i <= leng[0] ; i++)
+//	{
+//		L[i][0] = 0 ;
+//	}
+//	for (int j = 0 ; j <= leng[1] ; j++)
+//	{
+//		L[0][j] = 0 ;
+//	}
+//	for (int i = 1 ; i <= leng[0] ; i++)
+//		for (int j = 1 ; j <= leng[1] ; j++)
+//		{
+//			if (St[0][i-1] == St[1][j-1])
+//			{
+//				L[i][j] = L[i-1][j-1] + 1 ;
+//			}
+//			else
+//			{
+//				L[i][j] = L[i-1][j] >= L[i][j-1] ? L[i-1][j] : L[i][j-1] ;
+//			}
+//		}
+//
+//	printf("%d",L[leng[0]][leng[1]]);
+//
+//
+//	system("pause");
+//	return 0;
+//}
