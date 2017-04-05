@@ -65,53 +65,53 @@ inline void RI(int& x)
 
 char  S[11][101];
 
-int main() {
-	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
-	int n,last ,flag , j;
-	scanf("%d", &n);
-	rep(i, n)scanf("%s", S[i]);
-	rep(i, n)
-	{
-		last = 0;
-		flag = 0;
-		j = 0;
-		while (S[i][j])
-		{
-			if (S[i][j] == 'A')
-			{
-				flag++;
-			}
-			j++;
-		}
-		if (flag > 1)
-		{
-			printf("NO\n");
-			continue;
-		}
-		flag = 0;
-		j = 0 ;
-		while (S[i][j])
-		{
-			if (S[i][j] == 'L')
-			{
-				flag++;
-				if (flag >= 3)
-				{
-					printf("NO\n");
-					break;
-				}
-			}
-			else
-			{
-				flag = 0;
-			}
-			j++;
-		}
-		if (flag < 3)
-		{
-			printf("YES\n");
-		}
-	}
-	
-	system("pause");
-}
+//int main() {
+//	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
+//	int n,last ,flag , j;
+//	scanf("%d", &n);
+//	rep(i, n)scanf("%s", S[i]);
+//	rep(i, n)
+//	{
+//		last = 0;
+//		flag = 0;
+//		j = 0;
+//		while (S[i][j])
+//		{
+//			if (S[i][j] == 'A')
+//			{
+//				flag++;
+//			}
+//			j++;
+//		}
+//		if (flag > 1)
+//		{
+//			printf("NO\n");
+//			continue;
+//		}
+//		flag = 0;
+//		j = 0 ;
+//		while (S[i][j])
+//		{
+//			if (S[i][j] == 'L')
+//			{
+//				flag++;
+//				if (flag >= 3)
+//				{
+//					printf("NO\n");
+//					break;
+//				}
+//			}
+//			else
+//			{
+//				flag = 0;
+//			}
+//			j++;
+//		}
+//		if (flag < 3)
+//		{
+//			printf("YES\n");
+//		}
+//	}
+//	
+//	system("pause");
+//}

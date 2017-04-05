@@ -78,6 +78,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CpuInfo.cpp" />
+    <ClCompile Include="test1.cpp" />
+    <ClCompile Include="test2.cpp" />
+    <ClCompile Include="test3.cpp" />
+    <ClCompile Include="test4.cpp" />
     <ClCompile Include="三个水桶等分8升水.cpp" />
     <ClCompile Include="位图排序.cpp" />
     <ClCompile Include="出勤记录I.cpp" />

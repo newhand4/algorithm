@@ -66,6 +66,25 @@ int slength(char st[])
 	return res;
 }
 
+//字符串结构体,动态增长的字符类(提供求所有字符串的最长公共子序列方法)
+//class multi_sequence
+//{
+//public:
+//protected:
+//private:
+//	struct single_sequence
+//	{
+//		void * t ;
+//		int len ;
+//		single_sequence(void * s, int length) :t(s), len(length) {};
+//	};
+//
+//	typename struct single_sequence  SI;//单个字符串
+//	
+//	//SI ** SD;
+//
+//};
+
 char St[801][801];  //缓冲空间,存放多个字符串 . 注 : 待写需要动态的变化
 int  leng[801];     //存放对应字符串的长度
 int  L[801][801];   //计算所需的空间,这只能用于两个字符串. 注 : 待写

@@ -1,10 +1,12 @@
-﻿  出勤记录I.cpp
-d:\document\github\algorithm\algorithm\出勤记录i.cpp(41): warning C4244: “初始化”: 从“double”转换到“ll”，可能丢失数据
-d:\document\github\algorithm\algorithm\出勤记录i.cpp(69): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  test2.cpp
+d:\document\github\algorithm\algorithm\test2.cpp(41): warning C4244: “初始化”: 从“double”转换到“ll”，可能丢失数据
+d:\document\github\algorithm\algorithm\test2.cpp(80): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: 参见“freopen”的声明
-d:\document\github\algorithm\algorithm\出勤记录i.cpp(71): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\document\github\algorithm\algorithm\test2.cpp(83): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
-d:\document\github\algorithm\algorithm\出勤记录i.cpp(72): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\document\github\algorithm\algorithm\test2.cpp(87): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+d:\document\github\algorithm\algorithm\test2.cpp(91): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
   algorithm.vcxproj -> D:\document\github\algorithm\Debug\algorithm.exe
   algorithm.vcxproj -> D:\document\github\algorithm\Debug\algorithm.pdb (Full PDB)
