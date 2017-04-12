@@ -154,5 +154,8 @@
     <ClCompile Include="test4.cpp">
       <Filter>其他文件\offer12</Filter>
     </ClCompile>
+    <ClCompile Include="01背包问题.cpp">
+      <Filter>201704</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
