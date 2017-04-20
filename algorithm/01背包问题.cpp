@@ -3,7 +3,7 @@
  * @Author : huangshengjiang
  * @Email : 1005542693@qq.com
  * @Date : 2017-04-12 09:24
- * @Last Modified Date :     
+ * @Last Modified Date : 2017-04-20 23:48     
  * @FileName : 01背包问题.cpp
  */
 
@@ -23,52 +23,74 @@
 		   则有 f[i][j] = max{f[i-1][j](没有选取i物品),f[i-1][j-si]+vi(选取i物品)}.
 		   其中f[0][j] = 0 j = 0,s1,s2,s3,..sn,s1+s2,s1+s3,...C ; f[i][0] = 0 i = 0..N ; 
 		   
-		   
 	    时间复杂度 : O(n+1*n/2)=O(n^2)
 		空间复杂度 : 一般用二维数组表示矩阵,可是实际中运用到的是矩阵的一半空间.可以用节点方式表示,是否节省空间待议?
-		简化 : 
 
 	引申问题 : 1.01背包问题隐形要求是物品最多选择1次,要是可选多次呢?
 			   2.j物品有两个维度(sj,vj),sj累加<=C的情况下,求vj累加的最大值.如果有三个维度(x,y,z),x累加<=CX,Y累加<=CY,z累加的最大值呢?4个维度呢?
 			   3.那最小值呢?
 			   4.如果三个维度(x,y,z),在x累加<C的情况下,求y+z累加最大,或者y*z累加最大?
 
-	方案对比 : 
-
-	结论 : 
-
  */
 #include <iostream>
 #include <vector>
 using namespace std;
+#define  N 100
 //函数
-struct pack
+struct good
 {
-	int N;
-
-
+	int value ;
+	int cap  ;
 };
+good GOODS[N];
 
+int  buf[N][N] = {0};
 
-
-int  backpack()
+int  knapsack(int n,int c)
 {
-
+	int i = 0 ;
+	int j = 0 ;
+	n++ ;
+	c++ ; 
+	for ( ; i < n ; i++)
+	{
+		buf[i][0] = 0 ; 
+	}
+	for ( ; j < c ; j++)
+	{
+		buf[0][j] = 0;
+	}
+	for ( i = 1 ; i < n ; i++ )
+	{
+		for (j = 1 ; j < c ; j++)
+		{
+			buf[i][j] = buf[i - 1][j];
+			if (j >= GOODS[i].cap)
+			{
+				buf[i][j] = buf[i][j] >= buf[ i - 1 ] [j - GOODS[i].cap] + GOODS[i].value ? buf[i][j] : buf[i - 1][j - GOODS[i].cap] + GOODS[i].value;
+			}
+		}
+	}
+	return buf[n-1][c-1];
 }
-
-
-
-//平白开销多余空间,不妥
-//#define  MAXN  1000
-//int S[MAXN][MAXN]; 
-
-
 
 //测试
 int main(int argc, char const *argv[])
 {
+	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
+	int n = 0, c = 0 ,vtmp = 0 , ptmp = 0;
+	scanf("%d", &n);
+	scanf("%d", &c);
+	for (int i = 0 ; i < n ; i++ )
+	{
+		scanf("%d", &GOODS[i+1].cap);
+		scanf("%d", &GOODS[i+1].value);
+		//GOODS[i].
+	}
 
+	int result = knapsack( n , c );
 
+	printf("最大总价值是%d", result);
 
 	system("pause");
 	return 0;
