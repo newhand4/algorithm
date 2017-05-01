@@ -40,6 +40,9 @@
     <Filter Include="其他文件\offer12">
       <UniqueIdentifier>{460704d6-a220-4841-8a6d-f4150f0f209a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="201705">
+      <UniqueIdentifier>{a5b98edf-e88f-4e61-b34d-b89974fa350a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="合并.cpp">
@@ -136,12 +139,6 @@
     <ClCompile Include="出勤记录I.cpp">
       <Filter>201703</Filter>
     </ClCompile>
-    <ClCompile Include="钢条切割.cpp">
-      <Filter>201704</Filter>
-    </ClCompile>
-    <ClCompile Include="自行车架.cpp">
-      <Filter>201704</Filter>
-    </ClCompile>
     <ClCompile Include="test1.cpp">
       <Filter>其他文件\offer12</Filter>
     </ClCompile>
@@ -156,6 +153,21 @@
     </ClCompile>
     <ClCompile Include="01背包问题.cpp">
       <Filter>201704</Filter>
+    </ClCompile>
+    <ClCompile Include="钢条切割.cpp">
+      <Filter>201705</Filter>
+    </ClCompile>
+    <ClCompile Include="自行车架.cpp">
+      <Filter>201705</Filter>
+    </ClCompile>
+    <ClCompile Include="矩阵链相乘.cpp">
+      <Filter>201705</Filter>
+    </ClCompile>
+    <ClCompile Include="所有点对的最短路径问题.cpp">
+      <Filter>201705</Filter>
+    </ClCompile>
+    <ClCompile Include="最短路径问题Dijkstra.cpp">
+      <Filter>201705</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
