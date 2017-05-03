@@ -2,18 +2,18 @@
 * -*- coding : GBK -*-
 * @Author : huangshengjiang
 * @Email : 1005542693@qq.com
-* @Date : xxxx-xx-xx xx:xx
-* @Last Modified Date : xxxx-xx-xx xx:xx
-* @FileName :   xxx.cpp
+* @Date : 2017-05-03 09:51
+* @Last Modified Date : 
+* @FileName : 最短路径问题Dijkstra.cpp
 */
 
-/*xxx
-基本概念 :
+/*最短路径问题Dijkstra
+基本概念 : 
 应用场景 :
 局限性 :
 具体需求 :
-输入 :
-输出 :
+	输入 :
+	输出 :
 
 分析 :
 时间复杂度 :
