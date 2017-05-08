@@ -33,17 +33,34 @@
 	   2.遍历u=1的所有边edge(1,v).计算D[1]+edge(1,v)和D[v]的大小,如果<,则更新D[v] = D[1]+edge(1,v)
 
 	   3.遍历D数组,找出X[i]=0中D[i]最小的值.然后置X[i]=1,Y[i]=0,将u=i代入第2步中循环.(循环打破条件是X[i]都等于1)
-时间复杂度 :
-空间复杂度 :
-简化 :
 
-解决方案1 :
+	   伪代码 : 1.X={1} ; Y <- V - {1} ; D[1]<-0  (用X[N] ,Y[N]数组表示)  
+				2.for y<- 2 to n
+				3.	if y 相邻于1 then D[y] <- length[1,y]
+				4.  else  D[y] = INF
+				5.  end if
+				6.end for
+				7.for j<- 1 to n-1
+				8.  令 y 属于 Y ,使得D[y]最小(这里消耗的时间复杂度O(n^2))
+				9.  X<-X U {y}  {将顶点y加入X}
+				10. Y<-Y - {y}  {将顶点y从Y中删除}
+				11. for 每条边(y,w)
+				12.     if w属于Y  and D[y]+length[y,w] < D[w] then
+				13.        D[w] = D[y]+length[y,w]
+				14. end for
+				15.end for
+时间复杂度 : 第8步中,查找符合的y需要O(n^2),这里可以改进,构建一棵最小树,顶点是最小值D[y].插入条件是D[w]从INF到常量值c变化.然后sift-up
+			 更新条件是D[w]从常量值c到b减少,然后对应位置sift-up.删除根节点是在第8步,然后自行sift-up.可以用数组计算
+空间复杂度 : 
+简化 : 
+
+解决方案1 : 第一个版本就按照伪代码写,时间复杂度为O(n^2),适用于稀疏图
+优缺点 : 
+
+解决方案2 : 改进第8步,适用于稠密图.当然最好用方案2
 优缺点 :
 
-解决方案2 :
-优缺点 :
-
-引申问题 :
+引申问题 : 如果要附加求路径呢?
 
 方案对比 :
 
@@ -53,11 +70,64 @@
 #include <iostream>
 using namespace std;
 //函数
-//DIJSTRA
+
+//方案1
+
+#define  NODEMAXLENGTH  100 
+//邻接表结构体
+struct Node
+{
+	int  vertex ; 
+	int  length ; 
+	Node * next ; 
+	Node( int v , int len ) : vertex( v ) , length (len) , next( NULL ){} ;
+};
+
+Node[NODEMAXLENGTH]  V_SET ; 
+
+int[NODEMAXLENGTH]   D ;
+
+
+
+
+void dijkstra1(int V )//
+{
+	
+}
+
+
+
+
+
+
 
 //测试
-/*int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
-system("pause");
-return 0;
-}*/
+	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
+	int V = 0 , E = 0 , vt = 0 , ed = 0 , len = 0 ; 
+	scanf("%d", &V ) ;
+	scanf("%d", &E ) ;
+	for (int i = 0 ; i < E ; i++ )
+	{
+		scanf("%d", &vt  );
+		scanf("%d", &ed  );
+		scanf("%d", &len );
+		Node * tmp = new Node ( ed , len ) ; 
+		/*if(Node[vt].next == NULL)
+		{
+			Node[vt].next = tmp ;
+		}
+		else 
+		{*/
+		tmp.next = V_SET[vt].next ; 
+		V_SET[vt].next = tmp ; 
+		/*}*/
+
+	}
+
+
+
+	system("pause");
+	return 0;
+}
