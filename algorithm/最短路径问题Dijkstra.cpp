@@ -74,7 +74,7 @@ using namespace std;
 //方案1
 
 #define  NODEMAXLENGTH  100 
-//邻接表结构体
+//邻接表结构体,计划用类表示
 struct Node
 {
 	int  vertex ; 
@@ -83,14 +83,14 @@ struct Node
 	Node( int v , int len ) : vertex( v ) , length (len) , next( NULL ){} ;
 };
 
-Node[NODEMAXLENGTH]  V_SET ; 
+Node  V_SET[NODEMAXLENGTH] ; //邻接表
 
-int[NODEMAXLENGTH]   D ;
-
-
+int   D[NODEMAXLENGTH] ; //所求的值
 
 
-void dijkstra1(int V )//
+
+
+void dijkstra1(int V_num )//V_num表示G=(V,E)的V数量
 {
 	
 }
@@ -104,15 +104,16 @@ void dijkstra1(int V )//
 //测试
 int main(int argc, char const *argv[])
 {
+	//准备数据
 	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
 	int V = 0 , E = 0 , vt = 0 , ed = 0 , len = 0 ; 
-	scanf("%d", &V ) ;
-	scanf("%d", &E ) ;
+	scanf("%d", &V ) ; 
+	scanf("%d", &E ) ; 
 	for (int i = 0 ; i < E ; i++ )
 	{
-		scanf("%d", &vt  );
-		scanf("%d", &ed  );
-		scanf("%d", &len );
+		scanf("%d", &vt  ) ;
+		scanf("%d", &ed  ) ;
+		scanf("%d", &len ) ;
 		Node * tmp = new Node ( ed , len ) ; 
 		/*if(Node[vt].next == NULL)
 		{
@@ -125,6 +126,9 @@ int main(int argc, char const *argv[])
 		/*}*/
 
 	}
+
+	//处理数据
+	
 
 
 
