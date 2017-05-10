@@ -75,24 +75,42 @@ using namespace std;
 
 #define  NODEMAXLENGTH  100 
 //邻接表结构体,计划用类表示
-struct Node
+class dijkstra
 {
-	int  vertex ; 
-	int  length ; 
-	Node * next ; 
-	Node( int v , int len ) : vertex( v ) , length (len) , next( NULL ){} ;
+public:
+	dijkstra();
+	~dijkstra();
+
+	void calculate(int V_num ) ; //主要计算函数
+	int  findmin() ; 			 //查找Y[i] = 0 且 D[i] 最小 . 返回i
+	void AddSet(int i) ; 		 //X = X U {i}, Y = Y-{i}
+
+	struct Node
+	{
+		int  vertex ; 
+		int  length ; 
+		Node * next ; 
+		Node( int v , int len ) : vertex( v ) , length (len) , next( NULL ){} ;
+	};
+
+private: 
+	Node  V_SET[NODEMAXLENGTH] ; //邻接表
+	int   X[NODEMAXLENGTH] ;     //存放X集合
+	int   Y[NODEMAXLENGTH] ;	 //存放Y集合
+
+	int   D[NODEMAXLENGTH] ; 	 //所求的值D[i]
 };
 
-Node  V_SET[NODEMAXLENGTH] ; //邻接表
-
-int   D[NODEMAXLENGTH] ; //所求的值
-
-
-
-
-void dijkstra1(int V_num )//V_num表示G=(V,E)的V数量
+dijkstra :: dijkstra()
 {
-	
+
+}
+
+
+
+void dijkstra::calculate(int V_num )//V_num表示G=(V,E)的V数量
+{
+
 }
 
 
@@ -115,22 +133,22 @@ int main(int argc, char const *argv[])
 		scanf("%d", &ed  ) ;
 		scanf("%d", &len ) ;
 		Node * tmp = new Node ( ed , len ) ; 
-		/*if(Node[vt].next == NULL)
-		{
-			Node[vt].next = tmp ;
-		}
-		else 
-		{*/
+
+		//添加到邻接表尾部
 		tmp.next = V_SET[vt].next ; 
 		V_SET[vt].next = tmp ; 
-		/*}*/
 
 	}
 
 	//处理数据
-	
+	dijkstra1(V) ; 
 
-
+	//输出结果
+	for (int i = 0; i < V+1 ; ++i)
+	{
+		printf("%d  ", D[i]);  
+	}
+	printf("\n");  
 
 	system("pause");
 	return 0;
