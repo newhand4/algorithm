@@ -10,7 +10,7 @@
 /*单点最短路径问题Dijkstra
 基本概念 : 设G=(V,E)是一个每条边有非负长度的有向图,有一个特异顶点s称为源.单点最短路径问题是确定从s到V中每一个顶点的最短距离
 应用场景 : 通信网络中源点到目的点的最短距离.
-局限性 : 只知道距离,希望改进保留相应的路径.
+局限性 : 1.只知道距离,希望改进保留相应的路径. 2.G=(V,E)图必须是连通的,不能是独立的两幅子图这种情况.
 	输入 : 含权有向图G=(V,E),V={1,2,...,n}
 	输出 : G中顶点1到其他顶点的距离
 例子 : 
@@ -74,49 +74,123 @@ using namespace std;
 //方案1
 
 #define  NODEMAXLENGTH  100 
+#define  INF            10E7
 //邻接表结构体,计划用类表示
 class dijkstra
 {
 public:
-	dijkstra();
-	~dijkstra();
+	dijkstra(int V);
+	~dijkstra() {};
 
-	void calculate(int V_num ) ; //主要计算函数
-	int  findmin() ; 			 //查找Y[i] = 0 且 D[i] 最小 . 返回i
-	void AddSet(int i) ; 		 //X = X U {i}, Y = Y-{i}
+	void Calculate() ;   						//主要计算函数
+	int  Findmin() ; 	 						//查找Y[i] = 0 且 D[i] 最小 . 返回i
+	void AddSet(int i) ; 						//X = X U {i}, Y = Y-{i}
+
+	void PrintResult() ; 						//输出结果
+	void Insert( int vt , int ed , int len ) ; 	//插入邻边
 
 	struct Node
 	{
 		int  vertex ; 
 		int  length ; 
 		Node * next ; 
-		Node( int v , int len ) : vertex( v ) , length (len) , next( NULL ){} ;
+		Node( int v , int len ) : vertex( v ) , length ( len ) , next( NULL ){} ;
+		Node():vertex( 0 ) , length( 0 ) , next(NULL) {};
 	};
-
 private: 
 	Node  V_SET[NODEMAXLENGTH] ; //邻接表
+
 	int   X[NODEMAXLENGTH] ;     //存放X集合
 	int   Y[NODEMAXLENGTH] ;	 //存放Y集合
 
 	int   D[NODEMAXLENGTH] ; 	 //所求的值D[i]
+	int   V_num ; 				 //顶点个数
 };
 
-dijkstra :: dijkstra()
+dijkstra :: dijkstra(int V)
+{ 
+	V_num = V ; 
+	for (int i = 2 ; i < V_num + 1 ; ++i )
+	{
+		X[i] = 0   ;
+		Y[i] = 1   ;
+		D[i] = INF ;
+	}
+	X[1] = 1 ;
+	Y[1] = 0 ;
+	D[0] = INF;
+	D[1] = 0 ;
+	
+}
+
+void dijkstra::Calculate( )//V_num表示G=(V,E)的V数量
 {
+	//对源点1进行初始化
+	Node * tmp = V_SET[1].next ; 
+	while(tmp)
+	{
+		D[tmp -> vertex] = tmp-> length ; 
+		tmp = tmp-> next ; 
+	}
+
+	//开始循环遍历.
+	int circle = V_num - 2 ; //顶点和终点不需要计算,因此-2
+	while(circle--)
+	{
+		int i = Findmin() ; 
+		AddSet(i) ; 
+
+		//i放入X集合后,更新(i,w)w属于Y 的邻边
+		tmp = V_SET[i].next ; 
+		while(tmp)
+		{
+			if ( Y[tmp -> vertex] == 1 )
+			{
+				int j = D[i] + tmp -> length ;
+				D[tmp-> vertex] = D[tmp-> vertex] < j ? D[tmp-> vertex] : j ;
+			}
+			tmp = tmp-> next ; 
+		}
+	}
 
 }
 
-
-
-void dijkstra::calculate(int V_num )//V_num表示G=(V,E)的V数量
+int  dijkstra::Findmin()
 {
-
+	int result = 0 ; //在Y集合中D[result]最小的下标值.
+	for (int i = 1; i < V_num + 1 ; ++i )
+	{
+		if( Y[i] == 1 && D[result] > D[i])
+		{
+			result = i ; 
+		}
+	}
+	return result ;
 }
 
+void dijkstra::AddSet(int i)
+{
+	X[i] = 1 ; 
+	Y[i] = 0 ; 
+}
 
+void dijkstra::PrintResult()
+{
+	for (int i = 1; i < V_num + 1 ; ++i )
+	{
+		printf("%d  ", D[i]) ;  
+	}
+	printf("\n");  
+}
 
+void dijkstra::Insert( int vt , int ed , int len )
+{
+	Node * tmp = new Node ( ed , len ) ; 
 
-
+	//添加到邻接表尾部
+	tmp->next = V_SET[vt].next ; 
+	V_SET[vt].next = tmp ; 
+}
 
 
 //测试
@@ -126,29 +200,21 @@ int main(int argc, char const *argv[])
 	freopen("C:\\Users\\hsj\\Desktop\\test.txt", "r", stdin);
 	int V = 0 , E = 0 , vt = 0 , ed = 0 , len = 0 ; 
 	scanf("%d", &V ) ; 
+	dijkstra * dij = new dijkstra( V ) ; 
 	scanf("%d", &E ) ; 
 	for (int i = 0 ; i < E ; i++ )
 	{
 		scanf("%d", &vt  ) ;
 		scanf("%d", &ed  ) ;
 		scanf("%d", &len ) ;
-		Node * tmp = new Node ( ed , len ) ; 
-
-		//添加到邻接表尾部
-		tmp.next = V_SET[vt].next ; 
-		V_SET[vt].next = tmp ; 
-
+		dij->Insert( vt , ed , len ) ; 
 	}
 
 	//处理数据
-	dijkstra1(V) ; 
+	dij->Calculate() ; 
 
 	//输出结果
-	for (int i = 0; i < V+1 ; ++i)
-	{
-		printf("%d  ", D[i]);  
-	}
-	printf("\n");  
+	dij->PrintResult() ; 
 
 	system("pause");
 	return 0;

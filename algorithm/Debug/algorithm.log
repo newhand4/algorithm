@@ -1,13 +1,17 @@
-﻿  01背包问题.cpp
-d:\document\github\algorithm\algorithm\01背包问题.cpp(80): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  最短路径问题Dijkstra.cpp
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(117): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(121): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(200): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(240): note: 参见“freopen”的声明
-d:\document\github\algorithm\algorithm\01背包问题.cpp(82): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(202): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
-d:\document\github\algorithm\algorithm\01背包问题.cpp(83): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(204): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
-d:\document\github\algorithm\algorithm\01背包问题.cpp(86): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(207): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
-d:\document\github\algorithm\algorithm\01背包问题.cpp(87): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(208): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
+d:\document\github\algorithm\algorithm\最短路径问题dijkstra.cpp(209): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1270): note: 参见“scanf”的声明
   algorithm.vcxproj -> D:\document\github\algorithm\Debug\algorithm.exe
   algorithm.vcxproj -> D:\document\github\algorithm\Debug\algorithm.pdb (Full PDB)
